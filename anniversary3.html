@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3 Months Anniversary 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ff6b9d;
+            --pink-light: #ff8fb7;
+            --purple: #c084fc;
+            --cream: #fff5f7;
+            --gold: #fbbf24;
+            --dark: #4a1942;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Khmer', sans-serif;
+            background: linear-gradient(135deg, #1a0a1e 0%, #2d1b3d 40%, #4a1942 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
+            position: relative;
+        }
+
+        /* Floating Hearts Background */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: var(--pink);
+            opacity: 0.6;
+            animation: floatUp linear infinite;
+            text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Main Content */
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 40px;
+            animation: fadeInDown 1.2s ease;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255, 107, 157, 0.2);
+            border: 1px solid rgba(255, 107, 157, 0.4);
+            color: var(--pink-light);
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8rem;
+            background: linear-gradient(90deg, #ff8fb7, #fbbf24, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 40px rgba(255, 107, 157, 0.3);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 8px rgba(255, 107, 157, 0.4));
+            }
+            to {
+                filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8));
+            }
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            color: #e9d5ff;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        /* Photo / Couple Section */
+        .couple-section {
+            margin: 40px 0;
+            animation: fadeIn 1.5s ease 0.3s both;
+        }
+
+        .photo-frame {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--pink), var(--purple));
+            padding: 6px;
+            box-shadow: 0 0 40px rgba(255, 107, 157, 0.4);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .photo-frame .inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4a1942, #2d1b3d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(255, 107, 157, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(255, 107, 157, 0.7), 0 0 80px rgba(192, 132, 252, 0.3);
+            }
+        }
+
+        .names {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fce7f3;
+            margin-top: 12px;
+        }
+
+        .names span {
+            color: var(--pink-light);
+        }
+
+        /* Message Card */
+        .message-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 40px 36px;
+            margin: 40px 0;
+            text-align: left;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.5s ease 0.6s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-card::before {
+            content: '💕';
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 80px;
+            opacity: 0.08;
+        }
+
+        .message-card h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: var(--pink-light);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .message-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #f3e8ff;
+            text-align: justify;
+        }
+
+        .message-text p {
+            margin-bottom: 18px;
+        }
+
+        /* Decorative Line */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 30px 0;
+            color: var(--pink);
+            font-size: 1.4rem;
+            opacity: 0.7;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            height: 1px;
+            width: 80px;
+            background: linear-gradient(90deg, transparent, var(--pink), transparent);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            padding-bottom: 40px;
+            animation: fadeIn 2s ease 1s both;
+        }
+
+        .footer p {
+            color: #d8b4fe;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .footer .from {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: var(--pink-light);
+            margin-top: 16px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2.6rem;
+            }
+            .message-card {
+                padding: 28px 22px;
+            }
+            .message-text {
+                font-size: 1.05rem;
+            }
+            .photo-frame {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts -->
+    <div class="hearts-container" id="hearts"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="badge">✨ 3 Months Together ✨</div>
+            <h1>Happy Anniversary</h1>
+            <p class="subtitle">ANNIVERSARY ME AND YOU❤️</p>
+        </div>
+
+        <!-- Couple -->
+        <div class="couple-section">
+            <div class="photo-frame">
+                <div class="inner">💑</div>
+            </div>
+            <div class="names">
+                <span>H.LYHOR</span> ❤️ <span>MENGNGY</span>
+            </div>
+        </div>
+
+        <div class="divider">💗</div>
+
+        <!-- Message -->
+        <div class="message-card">
+            <h2>MESSAGE THANK O💋</h2>
+            <div class="message-text">
+                <p>
+                    អរគុណអូនខ្លាំងណាស់ ដែលតែងតែអត់ធ្មត់ និងយោគយល់ចំពោះចរិតខ្វះខាតរបស់បងកន្លងមក💋។
+                </p>
+                <p>
+                    បងដឹងថាពេលខ្លះបងធ្វើឱ្យអូនអន់ចិត្ត តែអូននៅតែមិនបោះបង់បងចោល និងផ្តល់ឱកាសឱ្យបងបានកែប្រែខ្លួនឯង💞។
+                </p>
+                <p>
+                    បងពិតជាឱ្យតម្លៃលើទឹកចិត្តអូនខ្លាំងណាស់💞។
+                </p>
+                <p>
+                    បងពិតជាអរគុណដែលអូនបានចូលមកក្នុងជីវិតបង ហើយធ្វើឱ្យ ៣ ខែនេះជាពេលវេលាដ៏មានន័យបំផុត😘❤️។
+                </p>
+            </div>
+        </div>
+
+        <div class="divider">💕</div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>ស្រលាញ់អូនជានិច្ច</p>
+            <div class="from">— LYHOR 💋❤️—</div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating hearts
+        const heartsContainer = document.getElementById('hearts');
+        const heartSymbols = ['💕', '💗', '💖', '💓', '💞', '❤️', '🩷'];
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 16 + 14) + 'px';
+            heart.style.animationDuration = (Math.random() * 8 + 8) + 's';
+            heart.style.animationDelay = Math.random() * 3 + 's';
+            
+            heartsContainer.appendChild(heart);
+
+            // Remove after animation
+            setTimeout(() => {
+                heart.remove();
+            }, 16000);
+        }
+
+        // Create hearts periodically
+        setInterval(createHeart, 600);
+
+        // Initial hearts
+        for (let i = 0; i < 12; i++) {
+            setTimeout(createHeart, i * 300);
+        }
+    </script>
+</body>
+</html>
